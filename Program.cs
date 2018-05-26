@@ -10,15 +10,15 @@ In all cases finally print "Good bye". Use try-catch-finally.
 
 namespace _20180306_Task1_Exception
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             Console.Write("Enter a positive integer: ");
 
             try
             {
-                bool isInt = Int32.TryParse(Console.ReadLine(), out int number);
+                bool isInt = int.TryParse(Console.ReadLine(), out int number);
                 if (isInt != true || number < 0)
                 {
                     throw new Exception("Invalid number");
